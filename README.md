@@ -2,8 +2,9 @@
 This project is a web application designed to predict flight fares using machine learning algorithms. It employs Flask, a Python web framework, to provide users with a seamless experience in estimating flight costs based on various parameters. Leveraging a combination of data preprocessing techniques, model training, and prediction algorithms, the application aims to deliver accurate fare estimates tailored to individual user inputs.
 
 ## Screenshot
-![flight fare](https://github.com/smammar19/Flight-Fare-Prediction-System/assets/135743822/bcbb059d-91e6-40b3-99a8-ab37940dd576)
-![flight fare 2](https://github.com/smammar19/Flight-Fare-Prediction-System/assets/135743822/47914946-636d-4149-983a-355716259162)
+![flight fare 2](https://github.com/smammar19/Flight-Fare-Prediction-System/assets/135743822/e2e4fa7a-7255-46ac-8962-a180b990cdbc)
+![flight fare](https://github.com/smammar19/Flight-Fare-Prediction-System/assets/135743822/f340ffbc-ce63-40b8-be90-b97f46056de0)
+
 
 ## Features
 1. User-friendly Interface: The web interface allows users to input flight details easily and obtain fare predictions.
