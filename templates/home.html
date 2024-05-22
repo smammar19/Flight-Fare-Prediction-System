@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction Web-App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Fare Prediction Web-App</h1>
+        <p class="lead">Predicts Flight Fare within seconds</p>
+        <form method="post" action="/predict">
+            <div class="form-group">
+                <label for="source">Source</label>
+                <select class="form-control" id="source" name="source" required>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <select class="form-control" id="destination" name="destination" required>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Cochin">Cochin</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure">Date and Departure Time</label>
+                <input type="datetime-local" class="form-control" id="departure" name="departure" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival">Date and Arrival Time</label>
+                <input type="datetime-local" class="form-control" id="arrival" name="arrival" required>
+            </div>
+            <div class="form-group">
+                <label for="airline">Airline</label>
+                <select class="form-control" id="airline" name="airline" required>
+                    <option value="Jet Airways">Jet Airways</option>
+                    <option value="IndiGo">IndiGo</option>
+                    <option value="Air India">Air India</option>
+                    <option value="Multiple carriers">Multiple carriers</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="GoAir">GoAir</option>
+                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                    <option value="Jet Airways Business">Jet Airways Business</option>
+                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                    <option value="Trujet">Trujet</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="stops">Stops</label>
+                <select class="form-control" id="stops" name="stops" required>
+                    <option value="0">Non-Stop</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict Flight Fare</button>
+        </form>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
