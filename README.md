@@ -24,5 +24,5 @@ This project is a web application designed to predict flight fares using machine
 ## Contributing
 Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-##Acknowledgements
+## Acknowledgements
 The project makes use of various libraries and tools, including Flask for the web framework, scikit-learn for machine learning tasks, Pandas for data manipulation, and NumPy for numerical computations. Special thanks to the open-source community for their contributions.
